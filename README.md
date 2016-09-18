@@ -75,4 +75,4 @@ https://github.com/Arthurisme/auth0-iosmorphic
 
 ```
 
-MIT license
+MIT license    
