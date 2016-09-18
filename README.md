@@ -48,7 +48,7 @@ https://github.com/Arthurisme/auth0-iosmorphic
    pod setup
 
 
- ##File sturcture:
+##File sturcture:
 
 ```
 .
@@ -75,4 +75,4 @@ https://github.com/Arthurisme/auth0-iosmorphic
 
 ```
 
-MIT license    
+MIT license
