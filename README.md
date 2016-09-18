@@ -50,6 +50,7 @@ https://github.com/Arthurisme/auth0-iosmorphic
 
  ##File sturcture:
 
+'''
 .
 ├── README.md
 ├── app
@@ -71,5 +72,7 @@ https://github.com/Arthurisme/auth0-iosmorphic
 │   └── ios
 ├── references.d.ts
 └── tsconfig.json
+
+'''
 
 MIT license
