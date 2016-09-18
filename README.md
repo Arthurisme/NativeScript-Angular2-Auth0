@@ -21,7 +21,7 @@ https://github.com/Arthurisme/auth0-iosmorphic
 ##Notice:
 
 ###About install nativescript-auth0 plugin:
-   You must check the version of nativescript-auth0 plugin, Make sure it is the latest version (at least v 2.0).
+   After installation, You must check the version of nativescript-auth0 plugin in node_module directory, Make sure it is the latest version (at least v 2.0).
    If online installation fail to get correct version, you can install it local by : tns add plugin PathNameYourDownloadPlugin.
 
 ###About pod version:
