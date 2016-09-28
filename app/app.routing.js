@@ -5,6 +5,6 @@ exports.authProviders = [
 ];
 exports.appRoutes = [
     // { path: "", redirectTo: "/groceries", pathMatch: "full" }
-    { path: "", redirectTo: "/auth0login", pathMatch: "full" }
+    { path: "", redirectTo: "/auth0login", pathMatch: "full" },
 ];
-//# sourceMappingURL=app.routing.js.map
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLnJvdXRpbmcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJhcHAucm91dGluZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsbUNBQTBCLHNCQUFzQixDQUFDLENBQUE7QUFFcEMscUJBQWEsR0FBRztJQUMzQiw4QkFBUztDQUNWLENBQUM7QUFFVyxpQkFBUyxHQUFHO0lBQ3ZCLDREQUE0RDtJQUM1RCxFQUFFLElBQUksRUFBRSxFQUFFLEVBQUUsVUFBVSxFQUFFLGFBQWEsRUFBRyxTQUFTLEVBQUUsTUFBTSxFQUFFO0NBRzVELENBQUMifQ==

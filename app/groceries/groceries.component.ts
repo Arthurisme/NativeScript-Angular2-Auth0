@@ -9,10 +9,7 @@ import * as SocialShare from "nativescript-social-share";
 import { GroceryListComponent } from "./grocery-list/grocery-list.component";
 import { GroceryService } from "./shared";
 import { LoginService, alert, setHintColor } from "../shared";
-
- var auth0 = require("nativescript-auth0");
-var application = require("application");
-import * as appSettings from "application-settings";
+import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({
   selector: "gr-groceries",
@@ -31,11 +28,13 @@ export class GroceriesComponent implements OnInit {
   constructor(private router: Router,
     private store: GroceryService,
     private loginService: LoginService,
-    private page: Page) {}
+    private page: Page,
+    private navigateService:NavigateService
+  ) {}
 
   ngOnInit() {
     this.isAndroid = !!this.page.android;
-    this.page.actionBarHidden = true;
+    // this.page.actionBarHidden = true;
     this.page.className = "list-page";
   }
 
@@ -141,17 +140,4 @@ export class GroceriesComponent implements OnInit {
     this.loginService.logoff();
     this.router.navigate(["/login"]);
   }
-
-
-  gotoAuth0Login() {
-    this.router.navigate(["/auth0login"]);
-  }
-
-  doLogout() {
-    appSettings.remove("auth0Token");
-    appSettings.remove("auth0UserData");
-    this.router.navigate(["/auth0testpage"]);
-  }
-
-
 }

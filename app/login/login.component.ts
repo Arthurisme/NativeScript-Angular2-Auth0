@@ -9,6 +9,7 @@ import { Page } from "ui/page";
 import { TextField } from "ui/text-field";
 
 import { alert, setHintColor, LoginService, User } from "../shared";
+import {NavigateService} from "../shared/service/navigate.service";
 
 @Component({
   selector: "gr-login",
@@ -30,14 +31,15 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
     private userService: LoginService,
+    private navigateService:NavigateService,
     private page: Page) {
     this.user = new User();
-    this.user.email = "ngconf@telerik33.com";
+    this.user.email = "user@nativescript.org";
     this.user.password = "password";
   }
 
   ngOnInit() {
-    this.page.actionBarHidden = true;
+    // this.page.actionBarHidden = true;
   }
 
   focusPassword() {
@@ -67,7 +69,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.user)
       .then(() => {
         this.isAuthenticating = false;
-        this.router.navigate(["/"]);
+        this.router.navigate(["/groceries"]);
       })
       .catch(() => {
         alert("Unfortunately we could not find your account.");
@@ -179,4 +181,7 @@ export class LoginComponent implements OnInit {
     setHintColor({ view: emailTextField, color: hintColor });
     setHintColor({ view: passwordTextField, color: hintColor });
   }
+
+
+
 }

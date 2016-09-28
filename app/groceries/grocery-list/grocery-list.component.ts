@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, EventEmitter, Input, Output } from "@angular/core";
-import { Router } from "@angular/router";
+
 import { Grocery, GroceryService } from "../shared";
 import { alert } from "../../shared";
 
@@ -19,7 +19,7 @@ export class GroceryListComponent {
 
   listLoaded = false;
 
-  constructor(private router: Router, private store: GroceryService) { }
+  constructor(private store: GroceryService) { }
 
   load() {
     this.loading.next("");
@@ -62,9 +62,4 @@ export class GroceryListComponent {
         alert("An error occurred while deleting an item from your list.");
       });
   }
-
-
-
-
-
 }

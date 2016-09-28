@@ -4,8 +4,10 @@
 ##Currently(2016-09-18), nativescript-auth0 is working well on ios, and android will support in a short time.
 
 
-##This repo is for nativescript angular 2 project , with login via Auth0.
-##To the repo that sync login and toke to Spring boot back end, please go here:
+##The nativescript project with login via Auth0:
+https://github.com/Arthurisme/NativeScript-Angular2-Auth0
+
+##The nativescript project with login via Auth0 and sync login and token to Spring boot back end:
 https://github.com/Arthurisme/auth0-iosmorphic
 
 
@@ -22,7 +24,8 @@ https://github.com/Arthurisme/auth0-iosmorphic
 
 ###About install nativescript-auth0 plugin:
    After installation, You must check the version of nativescript-auth0 plugin in node_module directory, Make sure it is the latest version (at least v 2.0).
-   If online installation fail to get correct version, you can install it local by : tns add plugin PathNameYourDownloadPlugin.
+   If online installation fail to get correct version, you can install it local by : tns   plugin add PathNameYourDownloadPlugin.
+   For current plugin it is :tns plugin add app/plugin/nativescript-auth0.tar.gz
 
 ###About pod version:
 
@@ -46,6 +49,12 @@ https://github.com/Arthurisme/auth0-iosmorphic
 
    pod install
    pod setup
+
+### For token return roles:
+change  platforms/ios/Pods/Lock/Lock/Core/A0AuthParameters.m line 37:
+NSString * const A0ScopeOpenId = @"openid";
+to
+NSString * const A0ScopeOpenId = @"openid email roles user_metadata app_metadata picture offline_access";
 
 
 ##File sturcture:
@@ -75,4 +84,4 @@ https://github.com/Arthurisme/auth0-iosmorphic
 
 ```
 
-MIT license
+MIT licensew
